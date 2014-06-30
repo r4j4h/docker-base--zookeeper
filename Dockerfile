@@ -7,6 +7,10 @@ RUN yum -y update
 RUN yum -y install bridge-utils wget dnsmasq build-essential tar
 
 
+# Install appropriate JDK
+RUN yum -y install java-1.7.0-openjdk.x86_64
+
+
 # Install Zookeeper
 WORKDIR /root/zookeeper/
 
